@@ -1,0 +1,334 @@
+@font-face {
+    font-family: "Muller";
+    src: url("fonts/MullerRegular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: "Muller";
+    font-weight: 200;
+    src: url("fonts/MullerLight.ttf");
+}
+@font-face {
+    font-family: "Muller";
+    src: url("fonts/MullerExtraBold.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Muller";
+    src: url("fonts/MullerMedium.ttf");
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Muller;
+    min-height: 100vh;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+button:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+nav {
+    width: 100%;
+    height: 75px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    
+    background: white;
+}
+
+nav .nav-container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-container img {
+    align-self: center;
+    
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    height: 75px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    background: none;
+    position: relative;
+}
+
+nav ul li:last-child a {
+    margin: 0 50px;
+    padding:0;
+}
+
+nav ul li a:hover {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #E7FBFF 81.25%), #FFFFFF;
+    text-decoration: none;
+    color: black;
+    transition: 1s ease-in;
+}
+
+nav ul li:last-child a:hover {
+    background: none;
+}
+
+.items-number {
+    position: absolute;
+    top: 5px;
+    right: -5px;
+}
+
+.container-main {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.water-type, .volume-type {
+    border: 2px solid #C5F4FF;
+    border-radius: 20px;
+    color: black;
+    min-width: 75px;
+}
+
+.water-type:hover, .water-type:active, .volume-type:hover, .volume-type:active {
+    background-color: #C5F4FF;
+    border: 2px solid #C5F4FF;
+    color: black;
+}
+
+.water-type-group .btn-outline-primary:not(:disabled):not(.disabled).active, .water-type-group .btn-outline-primary:not(:disabled):not(.disabled):active,
+.volume-type-group .btn-outline-primary:not(:disabled):not(.disabled).active, .volume-type-group .btn-outline-primary:not(:disabled):not(.disabled):active {
+    background-color: #C5F4FF;
+    color: black;
+    border: 2px solid #C5F4FF;
+}
+
+.item-card {
+    width: 230px;
+    letter-spacing: -0.02em;
+    margin-top: 75px;
+    border: none;
+    border-radius: 26px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.item-basket-card {
+    width: 400px;
+    letter-spacing: -0.02em;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 26px;
+    border: none;
+}
+
+.button-item-qty {
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #C5F4FF;
+}
+
+.add-button {
+    background-color: #C5F4FF;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 auto;
+}
+
+.card-item-body {
+    margin-top: 50px;
+}
+
+.card-body .h5, .item-price {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.item-price {
+    font-weight: 700;
+}
+
+.card-subtitle {
+    color: #0494B4;
+}
+
+.cross {
+    position: absolute;
+    right: 2rem;
+    top: 2.4rem;
+}
+
+.item-water {
+    position: absolute;
+    top: -75px;
+    align-self: center;
+}
+
+.items-header, .basket-header {
+    border-bottom: 25px solid white;
+    -moz-border-image: url(img/wave-border-inverse.png) 45 round round;
+    -webkit-border-image: url(img/wave-border-inverse.png) 45 round round; 
+    -o-border-image: url(img/wave-border-inverse.png) 45 round round;
+    border-image: url(img/wave-border-inverse.png) 45 round round;
+}
+
+.items-cover:nth-child(2n+1) {
+    background-color: #E7FBFF;
+    width: 100vw;
+    border-bottom: 25px solid white;
+    -moz-border-image: url(img/wave-border.png) 45 round round;
+    -webkit-border-image: url(img/wave-border.png) 45 round round; 
+    -o-border-image: url(img/wave-border.png) 45 round round;
+    border-image: url(img/wave-border.png) 45 round round;
+}
+
+.basketList, .payment {
+    background-color: #E7FBFF;
+}
+
+.total-card, .payment-card {
+    border-radius: 26px;
+    border: none;
+    padding: 0 5px;
+}
+
+.card-footer {
+    padding: 0.75rem 1.25rem;
+    background: none;
+    border-top: none;
+}
+
+.total-card form {
+    width: 100%;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #0494B4;
+    color: #0494B4;
+    height: 30px;
+    padding: 0 10px;
+}
+
+input:focus, input:active {
+    outline: 0px;
+}
+
+input::placeholder {
+    color: #0494B4;
+  }
+
+.promocode-button {
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-color: white;
+    height: 40px;
+    min-width: 150px;
+    font-weight: 600;
+}
+
+.total-card .card-title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.total-text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.total-sum {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    color: #0494B4;
+}
+
+.total-button {
+    background: #C5F4FF;
+    border-radius: 16px;
+    border: none;
+    width: 100%;
+    padding: 15px 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.not-found {
+    background: #E7FBFF;
+}
+
+footer {
+    background-color: #0494B4;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .footer-logo, .footer-nav, .footer-contacts {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+    justify-content: flex-start;
+    color: white;
+  }
+
+  .footer-nav a {
+    color: white;
+  }
+  
+  .footer-nav a:hover {
+    text-decoration: underline;
+  }
+  
+  footer text, footer a {
+    padding: 5px 0;
+  }
+  
+  .footer-titles {
+    font-size: 25px;
+  }
+
+
