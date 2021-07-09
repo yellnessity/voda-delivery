@@ -14,8 +14,8 @@ export default function ItemsList({items, handleAddItem}) {
         {
             items.filter(item => !item.pack).length ?
             items.map(item => {
-                if (!item.pack)
-                return <ItemCard key={item._id} handleAddItem={handleAddItem} item={item}/>
+                if (!item.pack) return <ItemCard key={item._id} handleAddItem={handleAddItem} item={item}/>
+                else return null
             }) :
             <p className='container px-0 text-secondary'>Sorry, no items were found.</p>
         }
@@ -26,13 +26,13 @@ export default function ItemsList({items, handleAddItem}) {
         <div className="container-fluid items-cover">
         
         <Container className="my-3 px-0">
-        <h3 className="my-3" style={{fontWeight: 600}} className="mt-5">Packs of water</h3>
+        <h3 className="my-3" style={{fontWeight: 600}}>Packs of water</h3>
         <Row>
         {
             items.filter(item => item.pack).length ?
             items.map(item => {
-                if (item.pack)
-                return <ItemCard key={item._id} handleAddItem={handleAddItem} item={item}/>
+                if (item.pack) return <ItemCard key={item._id} handleAddItem={handleAddItem} item={item}/>
+                else return null
             }):
             <p className='container px-0 text-secondary'>Sorry, no items were found.</p>
             

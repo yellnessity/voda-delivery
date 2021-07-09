@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
+import React from 'react'
+import {Route, Switch} from 'react-router-dom'
 import { Container } from 'react-bootstrap'
 import { Summary, Payment } from '../components'
 import NotFound from './NotFound'
@@ -13,6 +13,7 @@ export default function Basket() {
     const handleTotalPrice = (value) => {
         setTotalPrice(value)
     }
+    
     return (
         <>
         <BasketPageContext.Provider value={ { handleTotalPrice, totalPrice } }>

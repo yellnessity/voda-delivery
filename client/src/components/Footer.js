@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="container d-flex justify-content-between">
 
         <div className="footer-logo">
-            <img src="img/voda delivery logo white.png" width="100" />
+            <img src="../img/voda delivery logo white.png" width="100" />
             <text>Delivering water to you since 2020!</text>
         </div>
 

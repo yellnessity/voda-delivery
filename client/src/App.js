@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import { Nav } from './components';
@@ -9,21 +9,12 @@ import Basket from './pages/Basket'
 import NotFound from './pages/NotFound'
 import Footer from './components/Footer'
 
-// export const BasketItemsContext = React.createContext();
-
 function App() {
-
-  // const [newItems, setNewItems] = useState(JSON.parse(localStorage.getItem('items')).length)
-
-  // const updateNewItems = (value) => {
-  //   setNewItems(value)
-  // }
 
   return (
     <Router>
       <Provider store={store}>
         <div style={{minHeight: "100vh"}}>
-        {/* <BasketItemsContext.Provider value={ {updateNewItems, newItems} }> */}
         <Nav/>
         <div className="px-3" style={{minHeight: "calc(100vh - 304px)"}}>
           <Switch>
@@ -37,11 +28,9 @@ function App() {
           </Switch>
         </div>
         <Footer />
-        {/* </BasketItemsContext.Provider> */}
         </div>
       </Provider>
     </Router>
-    
   )
 }
 

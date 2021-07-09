@@ -1,15 +1,7 @@
 import React from 'react'
 import { ButtonGroup, ToggleButton } from 'react-bootstrap'
 
-// function Categories({ onClickItem })
-
 const Categories = React.memo(function Categories({ activeWater, activeVolume, categories, filters }) {
-
-    // const water = ["Still", "Sparkling", "Sport"]
-    // const volumes = [0.3, 0.5, 1, 5, 12]
-
-    // const [waterTypes, setWaterTypes] = React.useState([]);
-    // const [volumeTypes, setVolumeTypes] = React.useState([]);
   
     const handleFilter = (filter, value) => {
         switch (filter) {

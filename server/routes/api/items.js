@@ -28,11 +28,9 @@ router.get('/', async (req, res) => {
                 query['_id'] = {$in: params[key]}
             }
         })
-        console.log(query)
         res.send(await items.find(query).toArray());
     }
     else {
-        console.log('no params')
         res.send(await items.find({}).toArray());
     }
 

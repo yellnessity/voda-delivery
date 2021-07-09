@@ -1,14 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const items = require('./routes/api/items.js');
+const promocode = require('./routes/api/promocode.js');
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
-const items = require('./routes/api/items.js');
 app.use('/api/items', items);
+app.use('/api/promocode', promocode);
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
